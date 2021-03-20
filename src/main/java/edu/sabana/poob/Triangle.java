@@ -25,7 +25,7 @@ public class Triangle extends Shape{
 
     public boolean isIsosceles() {
         boolean result = false;
-        if (side1 == side2 && side1 != side3 || side1 != side2 && side3 != side1 || side3 == side2 && side3 != side1) {
+        if (side1 == side2 && side1 != side3 || side1 != side2 && side3 == side1 || side3 == side2 && side3 != side1) {
             result = true;
         }
         return result;
@@ -38,6 +38,54 @@ public class Triangle extends Shape{
         return false;
     }
 
+    @Override
+    public double getArea(){
+        double result = 0;
+
+        if(isEquilateral()) {
+            result = ((Math.sqrt(3))/4)*(side1*side1);
+        }
+        if(isIsosceles()) {
+            double a=findDifferentSide();
+            double b=findEqualSide();
+            result=(b/4)*Math.sqrt((4*a*a)-(b*b));
+        }
+        if(side1 != side2 && side2 != side3){
+            double a=findDifferentSide();
+            double b=findEqualSide();
+            //s =
+            //result =Math.sqrt(s*(s-a)*(s-b)*(s-c));
+        }
+
+        return 0;
+
+    }
+
+    private double findEqualSide() {
+        if (side1 == side2){
+            return side1;
+        }
+        if (side2 == side3) {
+            return side2;
+        }
+        if (side1 == side3) {
+            return side3;
+        }
+        return 0;
+    }
+
+    public double findDifferentSide() {
+        if (side1 == side2){
+            return side3;
+        }
+        if (side2 == side3) {
+            return side1;
+        }
+        if (side1 == side3) {
+            return side2;
+        }
+        return 0;
+    }
 
 
 }
