@@ -16,6 +16,12 @@ public class Shape {
         return 0;
     }
 
+    public String getColor() {
+        this.color = color;
+
+        return color;
+    }
+
     public double getPerimeter() {
         return 0;
     }

@@ -1,7 +1,7 @@
 package edu.sabana.poob;
 
 public class Circle extends Shape {
-
+    public static final double PI = Math.PI;
     private double radius;
 
     public Circle() {
@@ -17,8 +17,33 @@ public class Circle extends Shape {
         this.radius = radius;
     }
 
-    public double getDiameter() {
-        return 0;
+    @Override
+    public double getArea() {
+        return PI*radius*radius;
     }
 
+    @Override
+    public double getPerimeter() {
+        double a = 2*PI*radius;
+
+        return a;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("This is a %s with color %s and radius %s"
+                , this.getClass().getSimpleName()
+                , getColor() == null ? "NONE" : getColor()
+                , isDecimal() == true ? Double.toString(radius) : new java.text.DecimalFormat("#").format(radius));
+    }
+
+    public boolean isDecimal() {
+        return radius%2 == 0 || radius == 1 ? false : true;
+    }
+
+    //new java.text.DecimalFormat("#.#").format(radius)
+
+    public double getDiameter() {
+        return 2*radius;
+    }
 }
