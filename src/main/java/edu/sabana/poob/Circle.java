@@ -41,8 +41,6 @@ public class Circle extends Shape {
         return radius%2 == 0 || radius == 1 ? false : true;
     }
 
-    //new java.text.DecimalFormat("#.#").format(radius)
-
     public double getDiameter() {
         return 2*radius;
     }
