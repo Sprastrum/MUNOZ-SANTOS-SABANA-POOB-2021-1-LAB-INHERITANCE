@@ -1,7 +1,5 @@
 package edu.sabana.poob;
 
-import java.math.BigDecimal;
-
 public class Circle extends Shape {
     public static final double PI = Math.PI;
     private double radius;

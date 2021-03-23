@@ -16,18 +16,14 @@ public class Rectangle extends Shape {
     }
 
     public Rectangle(double width, double length) {
-        if(width != length) {
-            this.width = width;
-            this.length = length;
-        }
+        this.width = width;
+        this.length = length;
     }
 
     public Rectangle(String color, double width, double length) {
         super(color);
-        if(width != length) {
-            this.width = width;
-            this.length = length;
-        }
+        this.width = width;
+        this.length = length;
     }
 
     public double getDiagonal() {
