@@ -26,6 +26,10 @@ public class Shape {
         return 0;
     }
 
+    public boolean isDecimal(double d) {
+        return d - (int) d > 0;
+    }
+
     @Override
     public String toString() {
         return String.format("This is a %s with color %s"

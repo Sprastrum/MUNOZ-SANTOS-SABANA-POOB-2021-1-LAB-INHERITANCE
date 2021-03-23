@@ -1,5 +1,7 @@
 package edu.sabana.poob;
 
+import java.math.BigDecimal;
+
 public class Circle extends Shape {
     public static final double PI = Math.PI;
     private double radius;
@@ -24,9 +26,7 @@ public class Circle extends Shape {
 
     @Override
     public double getPerimeter() {
-        double a = 2*PI*radius;
-
-        return a;
+        return 2*PI*radius;
     }
 
     @Override
@@ -34,11 +34,7 @@ public class Circle extends Shape {
         return String.format("This is a %s with color %s and radius %s"
                 , this.getClass().getSimpleName()
                 , getColor() == null ? "NONE" : getColor()
-                , isDecimal() == true ? Double.toString(radius) : new java.text.DecimalFormat("#").format(radius));
-    }
-
-    public boolean isDecimal() {
-        return radius%2 == 0 || radius == 1 ? false : true;
+                , isDecimal(radius) ? Double.toString(radius) : new java.text.DecimalFormat("#").format(radius));
     }
 
     public double getDiameter() {
