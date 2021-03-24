@@ -8,10 +8,9 @@ public class EmployeeForCommission extends Employee{
     private double salary;
     private int sales;
 
-    public EmployeeForCommission(UUID id, String name, String lastname, Department department, int sales) {
+    public EmployeeForCommission(String name, String lastname, Department department, int sales) {
         super(name, lastname, department);
         this.sales = sales;
-        salary = calculateSalary();
     }
 
     @Override

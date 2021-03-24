@@ -6,6 +6,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class TriangleTest {
+
     private static Triangle t;
     private static Triangle tIsosceles;
     private static Triangle tGeneric;

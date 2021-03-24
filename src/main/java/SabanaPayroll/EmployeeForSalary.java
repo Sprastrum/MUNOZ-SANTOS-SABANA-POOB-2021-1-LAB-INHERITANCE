@@ -6,7 +6,7 @@ public class EmployeeForSalary extends Employee {
     private static final double PENSION_BENEFIT= 0.04;
     private double salary;
 
-    public EmployeeForSalary(String name, String lastname, Department department, Double salary) {
+    public EmployeeForSalary(String name, String lastname, Department department, double salary) {
         super(name,lastname,department);
         this.salary=calculateSalary(salary);
 
