@@ -12,17 +12,28 @@ public class Triangle extends Shape{
     }
 
     public Triangle (double side1, double side2, double side3) {
-        this.side1 = side1;
-        this.side2 = side2;
-        this.side3 = side3;
+        if (theTriangleIsValid(side1,side2,side3)) {
+            this.side1 = side1;
+            this.side2 = side2;
+            this.side3 = side3;
+        }
     }
     public Triangle (String color,double side1, double side2, double side3){
         super(color);
-        this.side1 = side1;
-        this.side2 = side2;
-        this.side3 = side3;
+        if (theTriangleIsValid(side1,side2,side3)) {
+            this.side1 = side1;
+            this.side2 = side2;
+            this.side3 = side3;
+        }
     }
 
+    private boolean theTriangleIsValid(double a, double b, double c) {
+        if((a+b)>c && (a+c)>b && (b+c)>a) {
+            return true;
+        }else {
+            return false;
+        }
+    }
     public boolean isIsosceles() {
         boolean result = false;
         if (side1 == side2 && side1 != side3 || side1 != side2 && side3 == side1 || side3 == side2 && side3 != side1) {
@@ -40,52 +51,29 @@ public class Triangle extends Shape{
 
     @Override
     public double getArea(){
-        double result = 0;
-
-        if(isEquilateral()) {
-            result = ((Math.sqrt(3))/4)*(side1*side1);
-        }
-        if(isIsosceles()) {
-            double a=findDifferentSide();
-            double b=findEqualSide();
-            result=(b/4)*Math.sqrt((4*a*a)-(b*b));
-        }
-        if(side1 != side2 && side2 != side3){
-            double a=findDifferentSide();
-            double b=findEqualSide();
-            //s =
-            //result =Math.sqrt(s*(s-a)*(s-b)*(s-c));
-        }
-
-        return 0;
-
+        double s = (side1+side2+side3)/2;
+        return Math.sqrt(s*(s-side1)*(s-side2)*(s-side3));
     }
-
-    private double findEqualSide() {
-        if (side1 == side2){
-            return side1;
-        }
-        if (side2 == side3) {
-            return side2;
-        }
-        if (side1 == side3) {
-            return side3;
-        }
-        return 0;
+    @Override
+    public double getPerimeter(){
+        return side1+side2+side3;
     }
-
-    public double findDifferentSide() {
-        if (side1 == side2){
-            return side3;
+    @Override
+    public String toString(){
+        String result = "Scalene";
+        if (this.isIsosceles()){
+            result = "Isosceles";
         }
-        if (side2 == side3) {
-            return side1;
+        if (this.isEquilateral()) {
+            result = "Equilateral";
         }
-        if (side1 == side3) {
-            return side2;
-        }
-        return 0;
+        return String.format("This is an %s %s with color %s that has sides equivalent to %s, %s, %s"
+                , result
+                , this.getClass().getSimpleName()
+                , super.getColor() == null ? "NONE" : super.getColor()
+                ,side1
+                ,side2
+                ,side3);
     }
-
 
 }
