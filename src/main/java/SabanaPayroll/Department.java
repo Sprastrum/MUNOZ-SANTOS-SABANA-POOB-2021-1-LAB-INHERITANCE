@@ -23,6 +23,6 @@ public class Department {
     }
 
     public double calculateDepartmentSalaries() {
-        return 0;
+        return 1;
     }
 }
