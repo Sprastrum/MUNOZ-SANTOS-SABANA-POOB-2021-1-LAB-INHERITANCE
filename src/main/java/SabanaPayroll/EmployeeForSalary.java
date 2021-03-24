@@ -13,7 +13,11 @@ public class EmployeeForSalary extends Employee {
     }
 
     public double calculateSalary(Double salary) {
-        return salary-(salary*HEALTH_BENEFIT)-(salary*PENSION_BENEFIT);
+        return Math.round(salary-(salary*HEALTH_BENEFIT)-(salary*PENSION_BENEFIT));
+    }
+
+    public double getSalary() {
+        return salary;
     }
 
     public double getHealthDiscount(){
