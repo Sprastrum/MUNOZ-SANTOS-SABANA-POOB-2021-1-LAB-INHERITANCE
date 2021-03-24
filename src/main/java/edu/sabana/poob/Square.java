@@ -9,12 +9,12 @@ public class Square extends Rectangle {
     private double side;
 
     public Square() {
-        super(1,1);
+        super();
         side = 1;
     }
 
     public Square(String color) {
-        super(color, 1, 1);
+        super(color);
         side = 1;
     }
 

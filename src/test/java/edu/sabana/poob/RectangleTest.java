@@ -22,32 +22,32 @@ public class RectangleTest {
 
     @Test
     public void shouldCalculateDiagonal() {
-        assertEquals(2, (int) Math.round(r1.getDiagonal()));
-        assertEquals(2, (int) Math.round(r2.getDiagonal()));
+        assertEquals(1, (int) Math.round(r1.getDiagonal()));
+        assertEquals(1, (int) Math.round(r2.getDiagonal()));
         assertEquals(11, (int) Math.round(r3.getDiagonal()));
         assertEquals(21, (int) Math.round(r4.getDiagonal()));
     }
 
     @Test
     public void shouldCalculateArea(){
-        assertEquals(2, (int) r1.getArea());
-        assertEquals(2, (int) r2.getArea());
-        assertEquals(50, (int) r3.getArea());
+        assertEquals(1, (int) r1.getArea());
+        assertEquals(1, (int) r2.getArea());
+        assertEquals(51, (int) r3.getArea());
         assertEquals(100, (int) r4.getArea());
     }
 
     @Test
     public void shouldCalculatePerimeter() {
-        assertEquals(6, (int) r1.getPerimeter());
-        assertEquals(6, (int) r2.getPerimeter());
+        assertEquals(4, (int) r1.getPerimeter());
+        assertEquals(4, (int) r2.getPerimeter());
         assertEquals(30, (int) r3.getPerimeter());
         assertEquals(50, (int) r4.getPerimeter());
     }
 
     @Test
     public void shouldPrintRectangle() {
-        assertEquals("This is a Rectangle with color NONE, width 1 and length 2", r1.toString());
-        assertEquals("This is a Rectangle with color red, width 1 and length 2", r2.toString());
+        assertEquals("This is a Rectangle with color NONE, width 1 and length 1", r1.toString());
+        assertEquals("This is a Rectangle with color red, width 1 and length 1", r2.toString());
         assertEquals("This is a Rectangle with color red, width 5.1 and length 10", r3.toString());
         assertEquals("This is a Rectangle with color NONE, width 20 and length 5", r4.toString());
     }

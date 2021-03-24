@@ -26,4 +26,15 @@ public class SabanaPayroll {
         return 0;
     }
 
+    public double calculateDepartmentSalaries(UUID departmentId) {
+        return 0;
+    }
+
+    public double calculateUniversitySalaries() {
+        return 0;
+    }
+
+    public void printPayroll() {
+
+    }
 }

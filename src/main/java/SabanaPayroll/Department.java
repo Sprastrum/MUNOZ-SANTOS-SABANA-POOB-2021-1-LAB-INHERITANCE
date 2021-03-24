@@ -1,11 +1,13 @@
 package SabanaPayroll;
 
+import java.util.ArrayList;
 import java.util.UUID;
 
 public class Department {
 
     public UUID id;
     private String name;
+    private ArrayList<Employee> employees = new ArrayList<>();
 
     public Department(UUID id, String name) {
         this.id = id;
@@ -16,7 +18,11 @@ public class Department {
         return id;
     }
 
-    public double calculateDepartmentSalaries() {
+    public boolean addEmployee() {
+        return false;
+    }
 
+    public double calculateDepartmentSalaries() {
+        return 0;
     }
 }
