@@ -7,6 +7,6 @@ public class EmployeeForSalary extends Employee {
 
     public EmployeeForSalary(String name, String lastname, Department department, Double salary) {
         super(name,lastname,department);
-
+    
     }
 }
