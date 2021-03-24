@@ -10,6 +10,7 @@ public class Employee {
 
     public Employee(){
     }
+
     public Employee(String name, String lastname, Department department) {
         this.id = UUID.randomUUID();
         this.name = name;

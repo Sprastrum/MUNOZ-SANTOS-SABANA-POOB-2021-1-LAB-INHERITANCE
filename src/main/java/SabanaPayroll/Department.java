@@ -9,8 +9,8 @@ public class Department {
     private String name;
     private ArrayList<Employee> employees = new ArrayList<>();
 
-    public Department(UUID id, String name) {
-        this.id = id;
+    public Department(String name) {
+        this.id = UUID.randomUUID();
         this.name = name;
     }
 

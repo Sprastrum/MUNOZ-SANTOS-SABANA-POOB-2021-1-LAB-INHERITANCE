@@ -9,7 +9,7 @@ public class EmployeeForCommission extends Employee{
     private int sales;
 
     public EmployeeForCommission(UUID id, String name, String lastname, Department department, int sales) {
-        super(id, name, lastname, department);
+        super(name, lastname, department);
         this.sales = sales;
         salary = calculateSalary();
     }
