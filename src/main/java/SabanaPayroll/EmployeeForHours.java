@@ -8,8 +8,8 @@ public class EmployeeForHours extends Employee{
     private double hours;
     private double salary;
 
-    public EmployeeForHours(UUID id, String name, String lastname, Department department, double hours) {
-        super(id, name, lastname, department);
+    public EmployeeForHours(String name, String lastname, Department department, double hours) {
+        super(name, lastname, department);
         salary = calculateSalary();
     }
 

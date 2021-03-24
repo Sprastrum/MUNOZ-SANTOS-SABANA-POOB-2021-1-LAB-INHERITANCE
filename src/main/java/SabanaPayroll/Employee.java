@@ -8,8 +8,10 @@ public class Employee {
     private String name, lastname;
     private Department department;
 
-    public Employee(UUID id, String name, String lastname, Department department) {
-        this.id = id;
+    public Employee(){
+    }
+    public Employee(String name, String lastname, Department department) {
+        this.id = UUID.randomUUID();
         this.name = name;
         this.lastname = lastname;
         this.department = department;
