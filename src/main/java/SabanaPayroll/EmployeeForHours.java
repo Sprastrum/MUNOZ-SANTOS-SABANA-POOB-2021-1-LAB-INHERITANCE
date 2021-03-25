@@ -14,10 +14,13 @@ public class EmployeeForHours extends Employee{
 
     @Override
     public double calculateSalary() {
-        return hours*HOUR_VALUE;
+        return Math.round(this.hours*HOUR_VALUE*10.0)/10.0;
     }
 
     public String toString() {
         return super.toString();
+    }
+    public Double getSalary() {
+        return calculateSalary();
     }
 }

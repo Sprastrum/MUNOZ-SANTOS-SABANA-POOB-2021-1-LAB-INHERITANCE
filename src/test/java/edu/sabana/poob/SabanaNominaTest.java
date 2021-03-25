@@ -27,19 +27,20 @@ public class SabanaNominaTest {
         s3 = new EmployeeForSalary("David", "Colmenares", I, 24600.2);
     }
 
+
     @Test
     public void givenSalaryEmployeesThenShouldAssignCorrectlyTheGivenSalary() {
-        assertEquals(9200.0,s1.getSalary());
-        assertEquals(4601.0,s2.getSalary());
-        assertEquals(22632.0,s3.getSalary());
+        assertEquals(9200.1,s1.getSalary());
+        assertEquals(4600.6,s2.getSalary());
+        assertEquals(22632.2,s3.getSalary());
     }
-
 
     @Test
     public void shouldCalculateOnlySalaryForHours() {
-        assertEquals(400, (int) e1h.getSalary());
-        assertEquals(636, (int) e2h.getSalary());
-        assertEquals(0, (int) e3h.getSalary());
+        assertEquals(400,  e1h.getSalary());
+        assertEquals(636, e2h.getSalary());
+        assertEquals(0,  e3h.getSalary());
     }
+
 
 }
