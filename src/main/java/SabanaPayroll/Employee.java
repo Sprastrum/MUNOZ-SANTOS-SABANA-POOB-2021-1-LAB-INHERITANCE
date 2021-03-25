@@ -25,8 +25,8 @@ public class Employee {
     @Override
     public String toString() {
         return String.format("%s %s, department %s, salary $%s, pay for %s",
-                this.name, this.lastname, this.department,
+                this.name, this.lastname, this.department.getName(),
                 Double.toString(calculateSalary()),
-                "NONE");
+                this.getClass().getSimpleName().equals("EmployeeForHours") ? "hours" : this.getClass().getSimpleName().equals("EmployeeForSalary") ? "salary" : "commissions");
     }
 }

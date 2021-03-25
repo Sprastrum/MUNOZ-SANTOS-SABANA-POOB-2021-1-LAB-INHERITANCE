@@ -20,6 +20,9 @@ public class EmployeeForHours extends Employee{
     public String toString() {
         return super.toString();
     }
+
+
+
     public Double getSalary() {
         return calculateSalary();
     }

@@ -16,9 +16,9 @@ public class SabanaNominaTest {
 
     @BeforeAll
     public static void setUp() {
-        I = new Department("INGENIERIA");
-        V = new Department("VENTAS");
-        F = new Department("FINANZAS");
+        I = new Department("ENGINEERING");
+        V = new Department("SALES");
+        F = new Department("FINANCE");
         e1h = new EmployeeForHours("Juan", "Perez", F, 10);
         e2h = new EmployeeForHours("Jorge", "Gómez", V, 15.9);
         e3h = new EmployeeForHours("Laura", "Beltran", I, 0);
@@ -43,4 +43,9 @@ public class SabanaNominaTest {
     }
 
 
+    @Test
+    public void shouldPrintInformationAboutEmployee() {
+        assertEquals("Juan Perez, department FINANCE, salary $400.0, pay for hours", e1h.toString());
+        assertEquals("Pedro Perez, department ENGINEERING, salary $9200.1, pay for salary", s1.toString());
+    }
 }
