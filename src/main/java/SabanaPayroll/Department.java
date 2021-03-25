@@ -22,11 +22,27 @@ public class Department {
         return id;
     }
 
-    public boolean addEmployee() {
-        return false;
+    public boolean addEmployee(Employee e) {
+        boolean result = true;
+
+        for(Employee a : employees) {
+            if(e.getId() == a.getId()) {
+                result = false;
+                break;
+            }
+        }
+
+        return result ? employees.add(e) : false;
     }
 
     public double calculateDepartmentSalaries() {
-        return 1;
+        double salaries = 0;
+        int i = 0;
+
+        for (i = 0; i < employees.size(); i++) {
+            salaries += employees.get(i).calculateSalary();
+        }
+
+        return salaries;
     }
 }

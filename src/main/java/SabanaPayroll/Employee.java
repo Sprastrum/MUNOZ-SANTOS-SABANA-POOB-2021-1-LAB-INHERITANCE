@@ -22,6 +22,10 @@ public class Employee {
         return 0;
     }
 
+    public UUID getId() {
+        return id;
+    }
+
     @Override
     public String toString() {
         return String.format("%s %s, department %s, salary $%s, pay for %s",
