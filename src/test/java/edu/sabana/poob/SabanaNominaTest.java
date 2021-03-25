@@ -27,14 +27,20 @@ public class SabanaNominaTest {
         s3 = new EmployeeForSalary("David", "Colmenares", I, 24600.2);
     }
 
-
     @Test
     public void givenSalaryEmployeesThenShouldAssignCorrectlyTheGivenSalary() {
         assertEquals(9200.1,s1.getSalary());
         assertEquals(4600.6,s2.getSalary());
         assertEquals(22632.2,s3.getSalary());
     }
+    @Test
+    public void givenSalaryEmployeesThenGetRightDiscounts() {
+        assertEquals(368.004,s1.getHealthDiscount());
+        assertEquals(184.02400000000003,s2.getHealthDiscount());
+        assertEquals(368.004,s1.getPensionDiscount());
+        assertEquals(184.02400000000003,s2.getPensionDiscount());
 
+    }
     @Test
     public void shouldCalculateOnlySalaryForHours() {
         assertEquals(400,  e1h.getSalary());
@@ -42,10 +48,10 @@ public class SabanaNominaTest {
         assertEquals(0,  e3h.getSalary());
     }
 
-
     @Test
     public void shouldPrintInformationAboutEmployee() {
         assertEquals("Juan Perez, department FINANCE, salary $400.0, pay for hours", e1h.toString());
         assertEquals("Pedro Perez, department ENGINEERING, salary $9200.1, pay for salary", s1.toString());
     }
+
 }
