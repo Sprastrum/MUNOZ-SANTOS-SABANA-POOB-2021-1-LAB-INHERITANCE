@@ -48,12 +48,4 @@ public class SabanaNominaTest {
         assertEquals("Juan Perez, department FINANCE, salary $400.0, pay for hours", e1h.toString());
         assertEquals("Pedro Perez, department ENGINEERING, salary $9200.1, pay for salary", s1.toString());
     }
-
-    @Test
-    public void shouldCalculateDepartmentSalary() {
-        I.addEmployee(s1);
-        I.addEmployee(s2);
-
-        assertEquals(13800.7, I.calculateDepartmentSalaries());
-    }
 }
