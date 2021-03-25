@@ -13,6 +13,7 @@ public class SabanaNominaTest {
     private static EmployeeForHours e2h;
     private static EmployeeForHours e3h;
     private static EmployeeForSalary s1,s2,s3;
+
     @BeforeAll
     public static void setUp() {
         I = new Department("INGENIERIA");
@@ -25,19 +26,20 @@ public class SabanaNominaTest {
         s2 = new EmployeeForSalary("Camilo", "Muñoz", I, 5000.6);
         s3 = new EmployeeForSalary("David", "Colmenares", I, 24600.2);
     }
-        @Test
-        public void givenSalaryEmployeesThenShouldAssignCorrectlyTheGivenSalary() {
-            assertEquals(9200.0,s1.getSalary());
-            assertEquals(4601.0,s2.getSalary());
-            assertEquals(22632.0,s3.getSalary());
-        }
+
+    @Test
+    public void givenSalaryEmployeesThenShouldAssignCorrectlyTheGivenSalary() {
+        assertEquals(9200.0,s1.getSalary());
+        assertEquals(4601.0,s2.getSalary());
+        assertEquals(22632.0,s3.getSalary());
+    }
 
 
     @Test
-    public void shouldCalculateSalaryForHours(){
-        assertEquals(400, e1h.calculateSalary());
-        assertEquals(636, Math.round(e2h.calculateSalary()));
-        assertEquals(0, e3h.calculateSalary());
+    public void shouldCalculateOnlySalaryForHours() {
+        assertEquals(400, (int) e1h.getSalary());
+        assertEquals(636, (int) e2h.getSalary());
+        assertEquals(0, (int) e3h.getSalary());
     }
 
 }

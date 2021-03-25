@@ -24,6 +24,9 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "NONE";
+        return String.format("%s %s, department %s, salary $%s, pay for %s",
+                this.name, this.lastname, this.department,
+                Double.toString(calculateSalary()),
+                "NONE");
     }
 }
