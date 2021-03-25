@@ -15,15 +15,15 @@ public class SabanaPayroll {
         for(Department a : departments) {
             if(d.getId() == a.getId()) {
                 result = false;
-                break;
+                return result;
             }
         }
-
-        return result ? departments.add(d) : false;
+        departments.add(d);
+        return result;
     }
 
     public double calculateEmployeeSalary(UUID employeeid) {
-        return 0;
+        return 1.0;
     }
 
     public double calculateDepartmentSalaries(UUID departmentId) {
