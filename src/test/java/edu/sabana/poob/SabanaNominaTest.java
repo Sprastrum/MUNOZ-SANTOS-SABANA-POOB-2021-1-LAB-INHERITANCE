@@ -1,4 +1,5 @@
 package edu.sabana.poob;
+
 import SabanaPayroll.*;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -47,5 +48,14 @@ public class SabanaNominaTest {
     public void shouldPrintInformationAboutEmployee() {
         assertEquals("Juan Perez, department FINANCE, salary $400.0, pay for hours", e1h.toString());
         assertEquals("Pedro Perez, department ENGINEERING, salary $9200.1, pay for salary", s1.toString());
+    }
+
+    @Test
+    public void shouldeCalculateDepartmentSalaries() {
+        I.addEmployee(e3h);
+        I.addEmployee(s2);
+        I.addEmployee(s1);
+
+        assertEquals(13800.7, I.calculateDepartmentSalaries());
     }
 }
