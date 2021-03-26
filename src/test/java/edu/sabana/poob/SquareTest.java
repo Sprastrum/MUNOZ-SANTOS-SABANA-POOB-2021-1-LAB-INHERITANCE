@@ -45,10 +45,10 @@ public class SquareTest {
     }
 
     @Test
-    public void shouldPrintRectangle() {
-        assertEquals("This is a Square with color NONE and side 1", s1.toString());
-        assertEquals("This is a Square with color red and side 1", s2.toString());
-        assertEquals("This is a Square with color red and side 5.5", s3.toString());
-        assertEquals("This is a Square with color NONE and side 29", s4.toString());
+    public void shouldPrintSquare() {
+        assertEquals("This is a Square with color NONE, width 1 and length 1", s1.toString());
+        assertEquals("This is a Square with color red, width 1 and length 1", s2.toString());
+        assertEquals("This is a Square with color red, width 5.5 and length 5.5", s3.toString());
+        assertEquals("This is a Square with color NONE, width 29 and length 29", s4.toString());
     }
 }

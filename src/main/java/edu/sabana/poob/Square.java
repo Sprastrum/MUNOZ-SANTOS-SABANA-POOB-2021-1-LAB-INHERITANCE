@@ -60,9 +60,6 @@ public class Square extends Rectangle {
      * returns the class name, the color, the width and length
      */
     public String toString() {
-        return String.format("This is a %s with color %s and side %s"
-                , this.getClass().getSimpleName()
-                , getColor() == null ? "NONE" : getColor()
-                , isDecimal(side) ? Double.toString(side) : new java.text.DecimalFormat("#").format(side));
+        return super.toString();
     }
 }
