@@ -7,7 +7,7 @@
 ## Parte II - Implementando herencia
 ### Evidencia Diseño
 
-![](img/shapes-class-diagram.png)
+![](img/shaper-class-diagram.png)
 
 ### Clase `Triangle` evidencia test
 ![](img/test-passed-triangle-class.PNG)
@@ -20,7 +20,7 @@
 
 ## Parte III - Diseñando Herencia
 ### Diseño
-![](img/shapes-class-diagram.png)
+![](img/shapes-class-2-diagram.png)
 
 ## Parte IV - Herencia en un contexto
 ### Diseños
