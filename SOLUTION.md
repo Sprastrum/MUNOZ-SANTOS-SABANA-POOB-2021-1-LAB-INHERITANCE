@@ -9,13 +9,13 @@
 
 ![](img/shapes-class-diagram.png)
 
-### Clase `Triangle` Evidencia Test
+### Clase `Triangle` evidencia test
 ![](img/test-passed-triangle-class.PNG)
 
-### Clase `Rectangle` Evidencia Test
+### Clase `Rectangle` evidencia test
 ![](img/test-passed-rectangle-class.PNG)
  
-### Clase `Square` Evidencia Test
+### Clase `Square` evidencia test
 ![](img/test-passed-square-class.PNG) 
 
 ## Parte III - Diseñando Herencia
@@ -39,5 +39,9 @@
 ### `Diseño calculateUniversitySalaries`
 ![](img/calculateuniversitysalaries-class-diagram.png)
 
-### Evidencia Tests
+### Evidencias
+### `Evidencia Test`
 ![](img/test-passed-sabanapayroll-system.PNG)
+
+### `Imprimir la lista de empleados`
+![](img/print-employee-sabanapayroll-system.PNG)
