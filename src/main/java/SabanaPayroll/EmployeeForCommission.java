@@ -14,7 +14,11 @@ public class EmployeeForCommission extends Employee{
 
     @Override
     public double calculateSalary() {
-        return COMMISSION_VALUE*sales;
+        return Math.round(COMMISSION_VALUE*sales*10.0)/10.0;
+    }
+
+    public double getSalary() {
+        return calculateSalary();
     }
 
     public String toString() {

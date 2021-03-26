@@ -21,6 +21,9 @@ public class Department {
     public UUID getId() {
         return id;
     }
+    public ArrayList<Employee> getEmployees() {
+        return employees;
+    }
 
     public boolean addEmployee(Employee e) {
         boolean result = true;
@@ -29,6 +32,9 @@ public class Department {
             if(e.getId() == a.getId()) {
                 result = false;
                 break;
+            } else if (a.getDepartment().getId()!= this.id){
+                  result = false;
+                    break;
             }
         }
 

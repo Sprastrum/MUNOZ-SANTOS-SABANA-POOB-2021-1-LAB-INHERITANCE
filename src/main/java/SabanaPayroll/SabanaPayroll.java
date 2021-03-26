@@ -22,19 +22,42 @@ public class SabanaPayroll {
         return result;
     }
 
-    public double calculateEmployeeSalary(UUID employeeid) {
-        return 1.0;
+    public double calculateEmployeeSalary(UUID employeeId) {
+        for(Department d: departments) {
+            for(Employee e: d.getEmployees()) {
+                if (e.getId() == employeeId) {
+                    return e.calculateSalary();
+                }
+            }
+        }
+        return 0.0;
     }
 
     public double calculateDepartmentSalaries(UUID departmentId) {
-        return 0;
+        for(Department d: departments) {
+            if (d.getId() == departmentId){
+                return d.calculateDepartmentSalaries();
+            }
+        }
+        return 0.0;
     }
 
     public double calculateUniversitySalaries() {
-        return 0;
+        double result = 0;
+        for(Department d: departments) {
+            result += d.calculateDepartmentSalaries();
+        }
+        return result;
     }
 
     public void printPayroll() {
+        System.out.println("-------SabanaPayroll--------");
+        for(Department d: departments){
+            for(Employee e: d.getEmployees()){
+                System.out.print(e.toString()+"\n");
+            }
 
+        }
+        System.out.println("-----------");
     }
 }

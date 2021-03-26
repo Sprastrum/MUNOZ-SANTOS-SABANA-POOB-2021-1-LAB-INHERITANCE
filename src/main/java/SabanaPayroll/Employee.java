@@ -23,6 +23,10 @@ public class Employee {
         return id;
     }
 
+    public Department getDepartment() {
+        return department;
+    }
+
     @Override
     public String toString() {
         return String.format("%s %s, department %s, salary $%s, pay for %s",
