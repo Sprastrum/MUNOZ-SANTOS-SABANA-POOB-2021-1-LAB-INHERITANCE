@@ -52,6 +52,12 @@ public class SabanaNominaTest {
         assertEquals(4600.6,s2.getSalary());
         assertEquals(22632.2,s3.getSalary());
     }
+    @Test
+    public void shouldGetCorrectlyTheSalaryDiscounts(){
+        assertEquals(368.004,s1.getHealthDiscount());
+        assertEquals(184.02400000000003,s2.getPensionDiscount());
+        assertEquals(905.288,s3.getHealthDiscount());
+    }
 
     @Test
     public void shouldCalculateOnlySalaryForHours() {
